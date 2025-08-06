@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  classifier:
+    build:
+      context: ./services/classifier
+    container_name: classifier
+    volumes:
+      - ./services/classifier:/app
+    restart: always
+
+  ocr:
+    build:
+      context: ./services/ocr
+    container_name: ocr
+    volumes:
+      - ./services/ocr:/app
+    restart: always

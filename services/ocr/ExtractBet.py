@@ -14,6 +14,6 @@ def extract_text_from_image(image_path):
         return f"[ERROR] OCR failed: {e}"
 
 # Optional local test
-if __name__ == "__main__":
-    text = extract_text_from_image("sample.jpg")
-    print(text)
+#if __name__ == "__main__":
+#    text = extract_text_from_image("sample.jpg")
+#    print(text)
