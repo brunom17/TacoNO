@@ -1,5 +1,8 @@
+fastapi
+uvicorn
 pandas
-scikit-learn
+scikit-learn==1.7.0
 joblib
-telethon
 emoji
+requests
+python-multipart

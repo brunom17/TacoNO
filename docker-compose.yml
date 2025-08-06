@@ -1,18 +1,18 @@
 version: '3.8'
 
 services:
-  classifier:
-    build:
-      context: ./services/classifier
-    container_name: classifier
-    volumes:
-      - ./services/classifier:/app
+  ocr:
+    build: ./services/ocr
+    container_name: ocr
+    ports:
+      - "5002:5000"
     restart: always
 
-  ocr:
-    build:
-      context: ./services/ocr
-    container_name: ocr
-    volumes:
-      - ./services/ocr:/app
+  classifier:
+    build: ./services/classifier
+    container_name: classifier
+    ports:
+      - "5001:5000"
+    depends_on:
+      - ocr
     restart: always
