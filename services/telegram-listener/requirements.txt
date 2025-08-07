@@ -1,0 +1,4 @@
+telethon
+requests
+emoji
+tempfile

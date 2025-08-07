@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   ocr:
     build: ./services/ocr
@@ -19,3 +17,12 @@ services:
     volumes:
       - ./services/classifier:/app
       - ./services/classifier/live_session.session:/app/live_session.session
+  listener:
+    build: ./services/telegram-listener
+    container_name: telegram-listener
+    depends_on:
+      - classifier
+    restart: always
+    volumes:
+      - ./services/telegram-listener:/app
+      - ./services/telegram-listener/live_session.session:/app/live_session.session
