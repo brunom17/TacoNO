@@ -6,3 +6,4 @@ joblib
 emoji
 requests
 python-multipart
+telethon

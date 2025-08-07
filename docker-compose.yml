@@ -16,3 +16,6 @@ services:
     depends_on:
       - ocr
     restart: always
+    volumes:
+      - ./services/classifier:/app
+      - ./services/classifier/live_session.session:/app/live_session.session
